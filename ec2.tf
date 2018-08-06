@@ -22,7 +22,6 @@ resource "aws_key_pair" "terraform-key" {
   public_key = "${var.publickey}"
 }
 
-}
 
 output "ec2_id" {
   value = "${aws_instance.ron-terraform-v00.id}"
