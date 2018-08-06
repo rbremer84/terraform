@@ -7,10 +7,21 @@ provider "aws" {
 resource "aws_instance" "ron-terraform-v00" {
   ami           = "${var.ami_ID}"
   instance_type = "${var.instance_class}"
+  key_name      = "terraform-key"
   
   tags {
     Name	= "ron-terraform-v00"
+    Environment = "staging"
   }
+  
+  depends_on = ["aws_key_pair.terraform-key"]
+}
+
+resource "aws_key_pair" "terraform-key" {
+  key_name   = "terraform-key"
+  public_key = "${var.publickey}"
+}
+
 }
 
 output "ec2_id" {
