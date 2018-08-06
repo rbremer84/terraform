@@ -9,7 +9,7 @@ resource "aws_instance" "ron-terraform-v00" {
   instance_type = "${var.instance_class}"
   
   tags {
-  	Name	= "ron-terraform-v00"
+    Name	= "ron-terraform-v00"
   }
 }
 
