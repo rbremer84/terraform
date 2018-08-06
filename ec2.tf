@@ -27,8 +27,8 @@ output "ec2_id" {
   value = "${aws_instance.ron-terraform-v00.id}"
 }
 output "pubic_dns" {
-  value = "${aws_instance.ron-terraform_v00.public_dns}"
+  value = "${aws_instance.ron-terraform-v00.public_dns}"
 }
 output "security_group" {
-  value = "${aws_instance.ron-terraform_v00.security_groups}"
+  value = "${aws_instance.ron-terraform-v00.security_groups}"
 }
